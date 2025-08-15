@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tripodencok Webpage</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background: #1e1e1e;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 15px;
+    }
+    
+    .banner {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #d1d1d1;
+    }
+
+    .profile-box {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+      padding: 10px 0;
+    }
+
+    .profile-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #d1d1d1;
+      background: #333;
+      background-image: url('https://tripodencok.github.io/TB_assets-1/img/profile.png');
+      background-size: cover;
+      background-position: center;
+      margin-right: 15px;
+    }
+
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nickname {
+      font-size: 20px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .realname {
+      font-size: 13px;
+      color: #ffffff;
+    }
+
+    .activity-small {
+      font-size: 13px;
+      color: #ddd;
+      margin-top: 4px;
+      font-weight: normal;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .web {
+      background: #2a2a2a;
+      border-radius: 10px;
+      padding: 15px;
+      position: relative;
+      border: 1px solid #3d3d3d;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .web-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #00a859;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    
+    .web-desc {
+      font-size: 14px;
+      color: #bbb;
+      flex-grow: 1;
+    }
+    
+    .web-inf {
+      font-size: 12px;
+      color: #ffcc00;
+      flex-grow: 50;
+    }
+
+    .web-btn {
+      display: inline-block;
+      padding: 8px 12px;
+      font-size: 14px;
+      color: #ffcc00;
+      border: 1px solid #ffcc00;
+      border-radius: 5px;
+      text-decoration: none;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .web-btn:hover {
+      background: #ffcc00;
+      color: #1e1e1e;
+    }
+    table {
+      width: 100%;
+      background: #000000;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      
+    }
+
+    table td {
+      vertical-align: top;
+    }
+
+    table td:first-child {
+      font-weight: bold;
+      padding-bottom: 5px;
+      width: 80px;
+      white-space: nowrap;
+    }
+    
+.web-item {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(33.333% - 20px);
+  margin: 10px;
+  background: #1e1e1e;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.divider {
+  width: 100%;
+  text-align: center;
+  color: gold;
+  font-weight: bold;
+  margin: 20px 0;
+  grid-column: 1 / -1;
+}
+  </style>
+</head>
+<body>
+	<h3 style="text-align:center; margin-top:0px;">---Tripodencok Webpage---</h3>
+	<!-- Banner -->
+    <img src="https://tripodencok.github.io/TB_assets-1/img/banner.png" alt="Banner" class="banner">
+
+    <div class="profile-box">
+      <div class="profile-img"></div>
+      <div class="profile-info">
+        <div class="nickname">Tripodencok</div>
+        <div class="realname">Oncek</div>
+        <div class="activity-small"><span id="activityText">{do}</span></div>
+      </div>
+    </div>
+    
+    <div style="width:100%; padding: 10px 0;">
+      <table>
+        <tr>
+          <td>my info:</td>
+          <td>
+            <p style="margin:0;">Hi, this is my profile, I like to make scripts and upload them on github</p>
+            <p style="margin:0;">ㅤ</p>
+            <p style="margin:0;">You can open it here, search for the tools/features you need, if I provide them, they will appear</p>
+          </td>
+        </tr>
+      </table>
+    
+    <div style="width:100%; padding: 10px 0;">
+      <table>
+        <tr>
+          <td>quick info:</td>
+          <td>
+            <p style="margin:0;">-like coding</p>
+            <p style="margin:0;">-like playing games</p>
+            <p style="margin:0;">-junior high school students</p>
+            <p style="margin:0;">-my hobby is doing what i like '_'</p>
+          </td>
+        </tr>
+      </table>
+      
+  <div class="container">
+  	
+  
+    <div class="web">
+      <span class="web-title">My GitHub</span>
+      <span class="badge">TB</span>
+      <p class="web-desc">My GitHub, the hub of the scripts you see</p>
+      <a href="https://github.com/tripodencok" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">scripts</p>
+    </div>
+
+    <div class="web">
+      <span class="web-title">My Discord server</span>
+      <span class="badge">tb</span>
+      <p class="web-desc">my discord server, you can join my community</p>
+      <a href="https://discord.com/invite/Mns7UrS3M2" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">discord</p>
+    </div>
+    
+            <div class="web">
+      <span class="web-title">log</span>
+      <p class="web-desc">view logs/updates from trilodencok webpage</p>
+      <span class="badge">TB</span>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/all/log.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">log : Minor update</p>
+    </div>
+    
+    <div class="web">
+      <span class="web-title">TB converter</span>
+      <span class="badge">TB</span>
+      <p class="web-desc">convert any language to TB language</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/text_converter/TBconverter.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: only this webpage</p>
+    </div>
+    
+    <div class="web">
+      <span class="web-title">Base64</span>
+      <span class="badge">Coming Soon</span>
+      <p class="web-desc">convert text to base64 language</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/coming_soon.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: all use</p>
+    </div>
+    
+    <div class="web">
+      <span class="web-title">Base32</span>
+      <span class="badge">Coming Soon</span>
+      <p class="web-desc">convert text to base32 language</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/coming_soon.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: all use</p>
+    </div>
+    
+    <div class="web">
+      <span class="web-title">Base16</span>
+      <span class="badge">Coming Soon</span>
+      <p class="web-desc">convert text to base16 language</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/coming_soon.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: all use</p>
+    </div>
+    
+    <div class="web">
+      <span class="web-title">binary</span>
+      <span class="badge">Coming Soon</span>
+      <p class="web-desc">convert text to binary language</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/coming_soon.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: all use</p>
+    </div>
+    
+    <div class="web">
+      <span class="web-title">hexadecimal</span>
+      <span class="badge">Coming Soon</span>
+      <p class="web-desc">convert text to hexadecimal language</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/coming_soon.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: all use</p>
+    </div>
+    
+    <div class="web">
+      <span class="web-title">octal</span>
+      <span class="badge">Coming Soon</span>
+      <p class="web-desc">convert text to octal language</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/coming_soon.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: all use</p>
+    </div>
+    
+    <div class="web">
+      <span class="web-title">code morse</span>
+      <span class="badge">Coming Soon</span>
+      <p class="web-desc">convert text to code morse language</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/coming_soon.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: all use</p>
+    </div>
+    
+    <div class="web">
+      <span class="web-title">ROT13</span>
+      <span class="badge">Coming Soon</span>
+      <p class="web-desc">convert text to ROT13 language</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/coming_soon.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: all use</p>
+    </div>
+    
+    
+    
+    <div class="web">
+      <span class="web-title">UUID Generator </span>
+      <p class="web-desc">generate UUID version 4, suitable for uuid in Manifest json</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/mcpe/uuidgenerator.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: several functions</p>
+    </div>
+    
+    <div class="web">
+      <span class="web-title">Resource pack Manifest Generator</span>
+      <p class="web-desc">create Manifest json Resource pack version</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/mcpe/res_manjson.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: mcpe</p>
+    </div>
+    
+    <div class="web">
+      <span class="web-title">Behavior pack Manifest Generator</span>
+      <p class="web-desc">create Manifest json Behavior pack version</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/mcpe/beh_manjson.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: mcpe</p>
+    </div>
+    
+    <div class="web">
+      <span class="web-title">Json Tidy up</span>
+       <span class="badge">Beta</span>
+      <p class="web-desc">tidy up valid json (input // will be removed on json tidy up)</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/all/json_tidyup.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: all use</p>
+    </div>
+    
+    
+    
+        <div class="web">
+      <span class="web-title">countdown timer</span>
+      <p class="web-desc">count down according to the specified time</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/time/countdown_timer.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: all use</p>
+    </div>
+    
+            <div class="web">
+      <span class="web-title">timestamp</span>
+      <p class="web-desc">maybe the timer and timestamp are the opposite, but here the function is to count forward the time </p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/time/timestamp.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: all use</p>
+    </div>
+    
+            <div class="web">
+      <span class="web-title">TB time</span>
+      <p class="web-desc">just info admin time {do time}, under the word "tripodencok" profile above</p>
+      <span class="badge">TB</span>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/time/tbtime.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">my info</p>
+    </div>
+    
+    <div class="web">
+      <span class="web-title">Nowtime (GMT)</span>
+      <p class="web-desc">you can see at any GMT what time it is now</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/time/nowtime_gmt.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: all use</p>
+    </div>
+    
+    <div class="web">
+      <span class="web-title">checktime</span>
+      <span class="web-title">(country/city)</span>
+      <span class="badge">Coming Soon</span>
+      <p class="web-desc">you can see at any country and city what time it is now</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/coming_soon.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: all use</p>
+    </div>
+    
+    
+    
+            <div class="web">
+      <span class="web-title">Random Text</span>
+      <span class="web-title">Generator</span>
+      <p class="web-desc">generate random text with the specific options you want</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/Generator/randomtext_generator.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: all use</p>
+    </div>
+    
+            <div class="web">
+      <span class="web-title">Random Number</span>
+      <span class="web-title">Generator</span>
+      <p class="web-desc">generate random numbers with the min and max you want</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/Generator/randomnumber_generator.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: all use</p>
+    </div>
+    
+            <div class="web">
+      <span class="web-title">HTML generator</span>
+      <p class="web-desc">create your own html without coding </p>
+      <span class="badge">Coming Soon</span>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/coming_soon.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: all html runners</p>
+    </div>
+    
+            <div class="web">
+      <span class="web-title">HTML executor</span>
+      <p class="web-desc">execute/run your html here</p>
+      <a href="https://tripodencok.github.io/TB_assets-1/scripts/all/html_executor.html" class="web-btn" target="_blank">&lt;&lt; click here &gt;&gt;</a>
+    <p class="web-inf">support for: all use</p>
+    </div>
+    
+  </div>
+  <script>
+    const schedule = {
+      1: [ 
+        ["00:00", "sleep"], ["06:00", "Get up"], ["07:00", "school"],
+        ["15:00", "At home"], ["15:45", "offline"], ["18:00", "online"], ["22:00", "offline"]
+      ],
+      2: [ 
+        ["00:00", "sleep"], ["06:00", "Get up"], ["07:00", "school"],
+        ["14:00", "At home"], ["15:00", "offline"], ["18:00", "online"], ["22:00", "offline"]
+      ],
+      3: [
+        ["00:00", "sleep"], ["06:00", "Get up"], ["07:00", "school"],
+        ["14:00", "At home"], ["15:00", "offline"], ["15:30", "Extracurricular"],
+        ["18:00", "online"], ["22:00", "offline"]
+      ],
+      4: [
+        ["00:00", "sleep"], ["06:00", "Get up"], ["07:00", "school"],
+        ["14:00", "At home"], ["15:00", "offline"], ["18:00", "online"], ["22:00", "offline"]
+      ],
+      5: [ 
+        ["00:00", "sleep"], ["06:00", "Get up"], ["07:00", "school"],
+        ["12:30", "At home"], ["15:00", "offline"], ["18:00", "online"], ["23:00", "offline"]
+      ],
+      6: [ 
+        ["00:00", "offline"], ["01:00", "sleep"], ["09:00", "Get up"],
+        ["10:00", "offline"], ["15:00", "online"], ["23:30", "offline"]
+      ],
+      0: [
+        ["00:00", "offline"], ["01:00", "sleep"], ["09:00", "Get up"],
+        ["10:00", "offline"], ["15:00", "online"], ["22:00", "offline"]
+      ]
+    };
+
+    function updateActivity() {
+      const now = new Date();
+      const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+      const gmt7 = new Date(utc + (7 * 3600000));
+
+      const day = gmt7.getDay(); 
+      const hours = String(gmt7.getHours()).padStart(2, "0");
+      const minutes = String(gmt7.getMinutes()).padStart(2, "0");
+      const currentTimeStr = `${hours}:${minutes}`;
+
+      const todaySchedule = schedule[day];
+      let currentActivity = todaySchedule[0][1]; 
+
+      for (let i = 0; i < todaySchedule.length; i++) {
+        if (currentTimeStr >= todaySchedule[i][0]) {
+          currentActivity = todaySchedule[i][1];
+        } else {
+          break;
+        }
+      }
+
+      document.getElementById("activityText").textContent = currentActivity;
+      if(document.getElementById("activityText2")) {
+        document.getElementById("activityText2").textContent = currentActivity;
+      }
+    }
+
+    setInterval(updateActivity, 1000);
+    updateActivity();
+  </script>
+</body>
+</html>
