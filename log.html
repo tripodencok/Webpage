@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+ <title>HTML Executor</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;font-weight: bold;
+    background: #1e1e1e;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    padding-bottom: 60px;
+  }
+
+  h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 32px;
+    border-bottom: 2px solid #333;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+
+  .section {
+    display: none;
+    padding: 20px;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .section.active {
+    display: block;
+  }
+
+  .button {
+    display: block;
+    width: 80%;
+    margin: 15px auto;
+    font-size: 16px;
+    background: #2a2a2a;
+      border-radius: 10px;
+      padding: 15px;
+    color: white;
+    border: 1px solid #444;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+  }
+
+  .button:hover {
+    background: #292929;
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  }
+
+  .back-btn {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 26px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+  }
+
+  .input-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+
+  .input-box {
+    text-align: center;
+    margin: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+
+  input, textarea, select {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    background-color: #111;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    max-width: 500px;
+    outline: none;
+    transition: 0.2s ease;
+  }
+
+  input:focus, textarea:focus, select:focus {
+    border-color: white;
+    background-color: #1a1a1a;
+  }
+
+  textarea {
+    resize: none;
+    height: 100px;
+    margin-top: 20px;
+  }
+
+  .output-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 20px;
+    color: white;
+    font-size: 15px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .nav {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    border-bottom: 2px solid #333;
+  }
+
+  .nav div {
+    margin: 0 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    color: white;
+    padding-bottom: 5px;
+  }
+
+  .nav div.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: white;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  #boardContainer div {
+  user-select: none;
+}
+
+#boardContainer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 20px auto;
+  max-width: 100vw;
+  touch-action: manipulation;
+}
+</style>
+</head>
+<body>
+ 
+<div id="twl" class="section active">
+  <h2 style="text-align:center; margin-top:20px;">Tripodencok Webpage Log</h2>
+  <h1></h1>
+<div style="text-align:left;">ㅤ</div>
+<h3 style="text-align:left; margin-top:30px;">New log(update):</h3>
+<div style="text-align:left;">ㅤlog v1.1:</div>
+<div style="text-align:left;">ㅤ-tidy up the Manifest generator script </div>
+<div style="text-align:left;">ㅤ-tidy up html executor script </div>
+<div style="text-align:left;">ㅤ-change a little bit of the web (button/menu to go to the script), change the location of the html executor to log and move the html executor down</div>
+<div style="text-align:left;">ㅤ-add web log</div>
+<div style="text-align:left;">ㅤ-tidy up the tbtime website</div>
+<div style="text-align:left;">ㅤ-slightly change the web html executor</div>
+<div style="text-align:left;">ㅤ-change the main website (github and discord web)</div>
+<div style="text-align:left;">ㅤ-add web/text analyzer feature</div>
+<div style="text-align:left;">ㅤ-updating the Nowtime (gmt) web/feature</div>
+<h1></h1>
+<h3 style="text-align:left; margin-top:30px;">all log:</h3>
+<div style="text-align:left;">ㅤlog  v1:</div>
+<div style="text-align:left;">ㅤ -release tripodencok webpage</div>
+<div style="text-align:left;">ㅤ That's all</div>
+<div style="text-align:left;">ㅤ</div>
+<div style="text-align:left;">ㅤlog v1.1:</div>
+<div style="text-align:left;">ㅤ-tidy up the Manifest generator script </div>
+<div style="text-align:left;">ㅤ-tidy up html executor script </div>
+<div style="text-align:left;">ㅤ-change a little bit of the web (button/menu to go to the script), change the location of the html executor to log and move the html executor down</div>
+<div style="text-align:left;">ㅤ-add web log</div>
+<div style="text-align:left;">ㅤ-tidy up the tbtime website</div>
+<div style="text-align:left;">ㅤ-slightly change the web html executor</div>
+<div style="text-align:left;">ㅤ-change the main website (github and discord web)</div>
+<div style="text-align:left;">ㅤ</div>
+<div style="text-align:left;">ㅤ</div>
+<div style="text-align:left;">ㅤ</div>
+<div style="text-align:left;">ㅤ</div>
+<div style="text-align:left;">ㅤ</div>
+<div style="text-align:left;">ㅤ</div>
+<div style="text-align:left;">ㅤ</div>
+<div style="text-align:left;">ㅤ</div>
+<div style="text-align:left;">ㅤ</div>
+<div style="text-align:left;">ㅤ</div>
+<div style="text-align:left;">ㅤ</div>
+<div style="text-align:left;">ㅤ</div>
+<div style="text-align:left;">ㅤ</div>
+  <div class="input-box" style="margin-top:20px;">
+
+ <script>
+ </script>
+</body>
+</html>
